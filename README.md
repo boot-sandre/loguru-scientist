@@ -19,7 +19,29 @@ and data trends. This level integrates seamlessly with existing logging systems,
 providing a straightforward way to log and monitor key metrics without cluttering 
 the application logs.
 
-### Logging Context (Not implemented yet)
+#### USE CASE
+
+You can use directly with import logger instance from loguru_scientist
+
+```python
+from loguru_scientist import logger
+
+logger.metric("CV polygon detection", dict(accuracy=0.694648, edge_detected=125, polygon_detected=32))
+```
+
+#### HOWTO
+
+If you want export in a file structured json record
+
+```python
+from loguru_scientist import logger
+from loguru_scientist.scientist import configure_metrics_file_sink
+
+configure_metrics_file_sink("metric/metrics.yaml", rotation="1 day")
+logger.metric("CV polygon detection", dict(accuracy=0.694648, edge_detected=125, polygon_detected=32))
+```
+
+### Logging Context
 
 The Logging Context feature introduces the ability to include a contextual 
 dictionary in all log messages. This context can contain essential information 
@@ -28,6 +50,14 @@ relevant data, allowing for more precise and efficient debugging and tracking.
 
 This feature is particularly useful in scenarios where tracking the flow and state 
 of data through various processes is crucial.
+
+#### USE CASE
+
+```python
+from loguru_scientist import logger
+
+logger = logger.bind(project_id=2656, stage="eval")
+```
 
 ## Contributing
 
