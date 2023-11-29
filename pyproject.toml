@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loguru-scientist"
+version = "0.1.0"
+authors = [
+    {name = "Simon ANDRE with Emencia ©", email = "simon@emencia.com"}
+]
+description = "Loguru logging extension dedicated to data scientists."
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+dependencies = ["loguru~=0.7.2"]
+
+[project.urls]
+homepage = "https://github.com/boot-sandre/loguru-scientist"
+company = "https://www.emencia.com"
