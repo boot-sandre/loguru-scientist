@@ -11,8 +11,3 @@ from loguru import logger as logger_legacy
 logger_legacy.level("METRIC", no=38, color="<green>", icon="📊")
 logger_legacy.__class__.metric = partialmethod(logger_legacy.__class__.log, "METRIC")
 
-
-logger = logger_legacy
-__all__ = [
-    "logger"
-]
