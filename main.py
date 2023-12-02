@@ -10,7 +10,9 @@ if __name__ == "__main__":
     logger = logger.bind(project_id=2656, stage="eval")
     logger.metric(
         "CV polygon detection start",
-        accuracy=0.694648, edge_detected=125, polygon_detected=32
+        accuracy=0.694648,
+        edge_detected=125,
+        polygon_detected=32,
     )
     logger.trace("This is a trace application logs")
     logger.debug("This is a debug application logs")
@@ -20,7 +22,7 @@ if __name__ == "__main__":
     logger.exception("This is an exception application logs")
     logger.metric(
         "CV polygon detection end",
-        **dict(accuracy=0.694648, edge_detected=500, polygon_detected=64)
+        **dict(accuracy=0.694648, edge_detected=500, polygon_detected=64),
     )
     logger.success("This is a success application logs")
 

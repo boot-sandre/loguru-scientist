@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "loguru-scientist"
 version = "0.1.0"
 authors = [
-    {name = "Simon ANDRE with Emencia ©", email = "simon@emencia.com"}
+    {name = "Simon ANDRE" , email = "simon@emencia.com"}
 ]
 description = "Loguru logging extension dedicated to data scientists."
 readme = "README.md"
@@ -20,7 +20,7 @@ requires-python = ">=3.10"
 dependencies = ["loguru~=0.7.2"]
 
 [tool.setuptools]
-package-dir = { "" = "loguru_scientist" }
+package-dir = { "loguru_scientist" = "loguru_scientist" }
 
 [project.urls]
 homepage = "https://github.com/boot-sandre/loguru-scientist"

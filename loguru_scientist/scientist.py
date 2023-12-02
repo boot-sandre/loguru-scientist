@@ -9,7 +9,11 @@ from functools import partial, partialmethod
 from loguru._logger import Logger
 
 from loguru_scientist.constant import (
-    LOG_METRIC_COLOR, LOG_METRIC_ICON, LOG_METRIC_NAME, LOG_METRIC_NO)
+    LOG_METRIC_COLOR,
+    LOG_METRIC_ICON,
+    LOG_METRIC_NAME,
+    LOG_METRIC_NO,
+)
 
 from loguru_scientist.tooling import metric_only
 

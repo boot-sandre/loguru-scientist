@@ -5,6 +5,7 @@ from loguru_scientist.scientist import configure_metrics_file_sink
 from loguru_scientist import logger
 from contextlib import contextmanager
 
+
 @contextmanager
 def capture_logs(level="INFO", format="{level}:{name}:{message}"):
     """Capture loguru-based logs."""
@@ -30,5 +31,5 @@ class MyTestCase(unittest.TestCase):
         self.all_level()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

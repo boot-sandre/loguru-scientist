@@ -1,4 +1,4 @@
-from .constant import LOG_METRIC_NO
+from loguru_scientist.constant import LOG_METRIC_NO
 
 
 def metric_only(record) -> bool:

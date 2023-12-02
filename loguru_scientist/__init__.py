@@ -1,5 +1,5 @@
 from loguru import logger
-
+from loguru._logger import Logger
 from loguru_scientist import scientist, constant, tooling
 
 # Always disable loguru in librairy context
@@ -7,12 +7,7 @@ from loguru_scientist import scientist, constant, tooling
 logger.disable("loguru_scientist")
 
 # Add new metric level
-logger = scientist.logger_guru(logger)
+logger: Logger = scientist.logger_guru(logger)
 
 
-__all__ = [
-    "logger",
-    "scientist",
-    "constant",
-    "tooling"
-]
+__all__ = ["logger", "scientist", "constant", "tooling"]
